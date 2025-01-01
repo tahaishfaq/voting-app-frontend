@@ -42,7 +42,7 @@ const Home = () => {
   const fetchIdeas = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/idea/getall?page=${page}&limit=5`);
+      const response = await fetch(`https://voting-app-backend-eta.vercel.app/api/idea/getall?page=${page}&limit=5`);
       const data = await response.json();
 
       if (data.status) {
@@ -71,7 +71,7 @@ const Home = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/api/idea/vote/${ideaId}/${userId}`, {
+      const response = await fetch(`https://voting-app-backend-eta.vercel.app/api/idea/vote/${ideaId}/${userId}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
       });

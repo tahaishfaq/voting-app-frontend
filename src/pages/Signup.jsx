@@ -35,7 +35,7 @@ const Signup = () => {
     dispatch(signOutStart());
 
     try {
-      const res = await fetch('http://localhost:5000/api/user/signup', {
+      const res = await fetch('https://voting-app-backend-eta.vercel.app/api/user/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
